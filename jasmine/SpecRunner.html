@@ -2,7 +2,7 @@
   "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-  <title>Jasmine Test Runner</title>
+  <title>Jasmine NodeJS Test Runner</title>
   <link rel="stylesheet" type="text/css" href="lib/jasmine-1.0.0/jasmine.css">
   <script type="text/javascript" src="lib/jasmine-1.0.0/jasmine.js"></script>
   <script type="text/javascript" src="lib/jasmine-1.0.0/jasmine-html.js"></script>
@@ -23,6 +23,12 @@
   jasmine.getEnv().addReporter(new jasmine.TrivialReporter());
   jasmine.getEnv().addReporter(JsReporter);
   jasmine.getEnv().execute();
+</script>
+
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    var socket = new io.Socket(null, {port: 3000});
+    socket.on('connect', function(){ console.log("Holy Shit"); });
 </script>
 
 </body>
