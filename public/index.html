@@ -3,33 +3,18 @@
 <html>
 <head>
   <title>Jasmine NodeJS Test Runner</title>
-  <link rel="stylesheet" type="text/css" href="lib/jasmine-1.0.0/jasmine.css">
-  <script type="text/javascript" src="/lib/jasmine-1.0.0/jasmine.js"></script>
-  <script type="text/javascript" src="/lib/jasmine-1.0.0/jasmine-html.js"></script>
-
-  <!-- include source files here... -->
-  <script type="text/javascript" src="/src/Player.js"></script>
-  <script type="text/javascript" src="/src/Song.js"></script>
-
-  <!-- include spec files here... -->
-  <script type="text/javascript" src="/spec/SpecHelper.js"></script>
-  <script type="text/javascript" src="/spec/PlayerSpec.js"></script>
-
 </head>
 <body>
 
-<script type="text/javascript">
-  var JsReporter = new jasmine.JsApiReporter();
-  jasmine.getEnv().addReporter(new jasmine.TrivialReporter());
-  jasmine.getEnv().addReporter(JsReporter);
-  jasmine.getEnv().execute();
-</script>
+<h1>JasmineBDD Test Runner</h1>
 
+
+<!-- Socket.IO Goodness, with JSON helper -->
 <script src="/lib/socket.io/socket.io.js"></script>
-<script>
-    var socket = new io.Socket(null, {port: 3000});
-    socket.on('connect', function(){ console.log("Holy Shit"); });
+<script src="/lib/json.js"></script>
+<script src="/src/jasmine-client.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+  jasmine-client.listen();
 </script>
-
 </body>
 </html>

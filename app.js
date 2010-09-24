@@ -5,7 +5,8 @@ var express = require('express'),
     io = require('socket.io'),
     http = require('http'),
     app = express.createServer(),
-    socket = io.listen(app);
+    socket = io.listen(app),
+    sys = require('sys');
 
 /*
  * Express Base =============================================================
@@ -19,9 +20,16 @@ app.use(express.staticProvider(__dirname + '/public'));
  *
  * Configures how Socket IO should behave! 
  */
+socket.on('connection', function(client) {
 
-// accepting socket connections and broadcast events
+  client.send('run');
 
+  client.on('message', function(message) {
+    sys.puts(message);
+  });
+
+
+});
 
 
 /*
