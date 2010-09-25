@@ -1,5 +1,7 @@
-# Node Swarm
+# Hot Test
 
-This is my attemp at writing a Test-swarm-like application with NodeJS. The purpose of this app
-is to be a tool similar to JSTestDriver or TestSwarm, but written in our native Language, on the
-hottest new tech.
+Hot Test allows you to do rapid unit testing of multiple browsers. The goal is to create
+a combination between Test Swarm and JS Test Driver, but faster cus it's written in
+zomg NodeJS.
+
+Usage details coming shortly
