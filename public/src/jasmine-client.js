@@ -29,7 +29,7 @@ var jasmineClient = {
             socket.connect();
             socket.send(JSON.stringify(JsReporter));
           } else {
-            setTimeout(sendTests, 50);
+            setTimeout(sendTests, 10);
           }
         };
 

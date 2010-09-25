@@ -52,11 +52,10 @@ fs.watchFile(__dirname + '/public/spec/', { interval: 5 }, function (curr, prev)
   if (curr.mtime.toString() === prev.mtime.toString()) {
     return;
   } else {
-    sys.puts("still say me");
-  }
-  for(i = 0, len = zombies.length; i < len; i++) {
-    zombies[i].send('run');
-  }
+    for(i = 0, len = zombies.length; i < len; i++) {
+      zombies[i].send('run');
+    }
+  } 
 });
 
 /*
